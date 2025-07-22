@@ -1,0 +1,14 @@
+name: "multieventpipeline"
+
+on:
+    push: #even: whenever a push is made on the master brranch
+        branches:
+            - master
+            - test
+
+jobs:
+    on--push:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Running on master push"
+              run: echo "running on master push"
